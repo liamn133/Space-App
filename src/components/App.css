@@ -1,0 +1,30 @@
+.blocks {
+    position: relative;
+}
+
+#test{
+    
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    
+}
+
+#headingContainer{
+    position: absolute;
+    top: 70px;
+    left: 50px;
+    width: 100vw;
+    
+    display: flex;
+   
+}
+
+.backButton{
+    width: 48px;
+    height: 38px;
+    padding: 0;
+    margin: 20px 0 0 25px;
+}
+
+

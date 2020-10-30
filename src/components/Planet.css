@@ -1,0 +1,64 @@
+*{
+    color: white;
+}
+
+@keyframes slideDownImg{
+    0%{
+     transform: translateY(-60%);
+     opacity: 0.2;
+    }
+
+
+    50%{
+     transform: translateY(-20%);
+     opacity: 0.6;
+    }
+    
+    75%{
+    transform: translateY(-6%);
+    opacity: 0.8;
+    }
+
+    100%
+    {
+    transform: translateY(0%);
+    opacity: 1;
+    }
+
+}
+
+@keyframes slideDownHeading{
+    0%{
+     transform: translateY(-180%);
+     opacity: 20%;
+    }
+    100%{
+     transform: translateY(0);
+     opacity: 100%;
+    }
+}
+
+
+
+img{
+    width: 450px;
+    height: 450px;
+}
+
+.planetContainer{
+    display: flex;
+    margin-top: 0px;
+}
+
+.planetData{
+    margin: 40px 20px 0px 70px;
+}
+
+.planetData, .planetBriefImg{
+    animation: 1.0s  linear 0s 1 slideDownImg;
+}
+
+.planetBriefHeading{
+   text-align: center;
+   animation: 1.5s  ease-in-out 0s 1 slideDownHeading;
+}
