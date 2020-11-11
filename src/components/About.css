@@ -1,15 +1,15 @@
-#aboutContainer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size: 1.5rem;
-    background-image: url('/images/aboutBackground.png');
-    background-size: cover;
-    height: 100vh;
-    width: 100vw;
+#aboutContainer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	font-size: 1.5rem;
+	background-image: url("../images/aboutBackground.png");
+	background-size: cover;
+	height: 100vh;
+	width: 100vw;
 }
 
-#aboutContainer h1{
-    color: white;
+#aboutContainer h1 {
+	color: white;
 }

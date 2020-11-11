@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './App.css';
-import Navbar from './Navbar'
 import planetDescriptions from '../constants/planetDescriptions'
 import HomeScreen from './HomeScreen';
 import SpaceCraft from './SpaceCraft'
 import Landing from './Landing';
-import About from './About'
+import About from './About';
 
 function App() {
   const [planets, setPlanets] = useState([])

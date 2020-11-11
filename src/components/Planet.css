@@ -46,8 +46,10 @@ img{
 }
 
 .planetContainer{
+   
     display: flex;
     margin-top: 0px;
+    background-image: url('../images/background.jpg')
 }
 
 .planetData{
