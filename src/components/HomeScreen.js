@@ -1,12 +1,11 @@
 import React, { useRef, useState, useEffect } from "react";
 import Block from "./Block";
 import Planet from "./Planet";
-import Fact from "./Fact";
 import "./HomeScreen.css";
 import "./SpaceCraftSlide"
 import SpaceCraftSlide from "./SpaceCraftSlide";
 import Galaxy from "./Galaxy"
-
+import Life from "./Life"
 /* function useOnScreen(options) {
 	const ref = useRef();
 	
@@ -110,10 +109,12 @@ const HomeScreen = ({
 				</div>
 			</section>
 			<Galaxy/>
+			<Life/>
 		</div>
 	);
 
 	const planetScreen = (
+		<div className = "homeDivWrap">
 		<div className="homeDiv">
 			<input
 				className="backButton"
@@ -136,6 +137,7 @@ const HomeScreen = ({
 				gravity={matchingPlanet.gravity}
 				planetDescriptions={planetDescriptions}
 			/>
+		</div>
 		</div>
 	);
 

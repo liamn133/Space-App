@@ -46,14 +46,24 @@ img{
 }
 
 .planetContainer{
-   
+
     display: flex;
-    margin-top: 0px;
-    background-image: url('../images/background.jpg')
+    margin-top: 10px;
+    
 }
 
 .planetData{
     margin: 40px 20px 0px 70px;
+    line-height: 1.6em;
+}
+
+.planetData h3{
+    display: inline-block;
+}
+
+.planetData p{
+    margin-top: 10px;
+    width: 50vw;
 }
 
 .planetData, .planetBriefImg{
@@ -61,6 +71,7 @@ img{
 }
 
 .planetBriefHeading{
+   margin-bottom: 10px;
    text-align: center;
    animation: 1.5s  ease-in-out 0s 1 slideDownHeading;
 }

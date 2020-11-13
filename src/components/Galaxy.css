@@ -2,31 +2,24 @@
     background: unset;
     width: 100vw;
     height: 100vh;
+    overflow-y: scroll;
     background-image: url('../images/milkyWay.jpg');
     background-size: cover;
     background-color:rgba(214, 21, 21, 0.1);
     position: relative;
 }
 
-#galaxyContainer p{
+.galaxyParagraph{
     padding: 15px 10px 15px 10px;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin: 100px 0px 100px 50px;
     width: 50vw;
-}
-
-#galaxyHeading{
-   
-    margin-left: 50px;
-    
-    
-}
-
-
-p{
-    margin-left: 50px;
     background-color:rgba(0,0,0,0.6);
     border: 1px solid rgba(0,0,0,0.6);
     border-radius: 6px;
     box-shadow: 4px 4px rgba(0,0,0,0.2);
+}
+
+#galaxyHeading{
+    margin-left: 50px;
+    margin-top: 50px;
 }

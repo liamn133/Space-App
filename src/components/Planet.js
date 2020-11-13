@@ -16,12 +16,24 @@ console.log(description.description)
                 <img className = "planetBriefImg" src={imgUrl} />
             </div>
             <div className="planetData">
-                <h3>Date discovered: {dateDiscovered}</h3>
-                <h3>Mass: {mass}*10^{massExp} kg</h3>
-                <h3>Number of moons: {moons}</h3>
-                <h3>Diameter: {radius*2}km </h3>
-                <h3>Gravity: {gravity}g</h3>
-                <h3>Description: <p>{description.description}</p></h3>
+                <p>
+                <h3>Date discovered</h3>: {dateDiscovered}
+                </p>
+                <p>
+                <h3>Mass</h3>: {mass}*10^{massExp} kg
+                </p>
+                <p>
+                <h3>Number of moons</h3>: {moons}
+                </p>
+                <p>
+                <h3>Diameter</h3>: {radius*2}km 
+                </p>
+                <p>
+                <h3>Gravity</h3>: {gravity}g
+                </p>
+                <p>
+                <h3>Description</h3>: {description.description}
+                </p>
             </div>
         </div>
     )
