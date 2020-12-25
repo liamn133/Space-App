@@ -1,39 +1,12 @@
 import React, { useRef, useState, useEffect } from "react";
+import Carousel from "react-elastic-carousel";
 import Block from "./Block";
 import Planet from "./Planet";
 import "./HomeScreen.css";
-import "./SpaceCraftSlide"
+import "./SpaceCraftSlide";
 import SpaceCraftSlide from "./SpaceCraftSlide";
-import Galaxy from "./Galaxy"
-import Life from "./Life"
-/* function useOnScreen(options) {
-	const ref = useRef();
-	
-	const [visible, setVisible] = useState(false);
-
-	useEffect(() => {
-		const observer = new IntersectionObserver(([entry]) => {
-			if(entry.isIntersecting){
-				setVisible(true)
-			}
-			else{
-				setVisible(false)
-			}
-		}, options);
-
-		if (ref.current) {
-			observer.observe(ref.current);
-		}
-
-		return () => {
-			if (ref.current) {
-				observer.unobserve(ref.current);
-			}
-		};
-	}, [ref, options]);
-
-	return [ref, visible];
-} */
+import Galaxy from "./Galaxy";
+import Life from "./Life";
 
 const HomeScreen = ({
 	planets,
@@ -44,37 +17,51 @@ const HomeScreen = ({
 	planetDescriptions,
 	setShow,
 }) => {
-	// const [ref, visible] = useOnScreen({ threshold: 0.4});
+	const breakPoints = [
+		{ width: 600, itemsToShow: 1 },
+		{ width: 900, itemsToShow: 2 },
+		{ width: 1100, itemsToShow: 3 },
+		{ width: 1270, itemsToShow: 4 },
+	];
 
+	useEffect(() => {
+		const queryLarge = window.matchMedia("(max-width:600px)");
+
+		queryLarge.addEventListener("change", (e) => {
+			if (e.matches) {
+			} else {
+			}
+		});
+	}, []);
 	const home = (
 		<div className="homeDiv">
 			<section className="blocks">
 				<div id="headingContainer">
-					<h1>Planets of Our Solar System</h1>
+					<h1 id="headingMain">Planets of Our Solar System</h1>
 				</div>
 				<div id="test">
-					{planets.map((planet, index) => (
-						<Block
-							key={planet.id}
-							name={planet.englishName}
-							dateDiscovered={
-								planet.discoveryDate != "" ? planet.discoveryDate : "N/A"
-							}
-							image={images[index]}
-							onImageClick={onImageClick}
-						/>
-					))}
+					<Carousel breakPoints={breakPoints}>
+						{planets.map((planet, index) => (
+							<Block
+								key={planet.id}
+								name={planet.englishName}
+								dateDiscovered={
+									planet.discoveryDate != "" ? planet.discoveryDate : "N/A"
+								}
+								image={images[index]}
+								onImageClick={onImageClick}
+							/>
+						))}
+					</Carousel>
 				</div>
 			</section>
 
 			{/* <Fact/> */}
 
-			<section
-				id="spaceCraft"
-			>   
+			<section id="spaceCraft">
 				<div id="spaceCraftGrid">
 					<h1 id="spaceHeading">Earth's spacecraft</h1>
-                    
+
 					<div id="div1">
 						<h3>Voyager 1</h3>
 						Launched by NASA on the 5th September 1977, Voyager 1 has spent over
@@ -105,39 +92,43 @@ const HomeScreen = ({
 						discoveries for a while yet.
 					</div>
 					<img id="img4" src="/images/newHorizons.png" />
-					<SpaceCraftSlide title = "Hello" content = "yar" src = "/images/cassini.png"/>
+					<SpaceCraftSlide
+						title="Hello"
+						content="yar"
+						src="/images/cassini.png"
+					/>
 				</div>
 			</section>
-			<Galaxy/>
-			<Life/>
+			<Galaxy />
+			<Life />
 		</div>
 	);
 
 	const planetScreen = (
-		<div className = "homeDivWrap">
-		<div className="homeDiv">
-			<input
-				className="backButton"
-				type="image"
-				onClick={() => setShow()}
-				src="/images/backImg.png"
-			></input>
-			<Planet
-				name={matchingPlanet.englishName}
-				dateDiscovered={
-					matchingPlanet.discoveryDate != ""
-						? matchingPlanet.discoveryDate
-						: "N/A"
-				}
-				imgUrl={`/images/${matchingPlanet.englishName}.png`}
-				mass={matchingPlanet.mass && matchingPlanet.mass.massValue}
-				massExp={matchingPlanet.mass && matchingPlanet.mass.massExponent}
-				moons={matchingPlanet.moons != null ? matchingPlanet.moons.length : 0}
-				radius={matchingPlanet.meanRadius}
-				gravity={matchingPlanet.gravity}
-				planetDescriptions={planetDescriptions}
-			/>
-		</div>
+		<div className="homeDivWrap">
+			<div className="homeDiv">
+				<input
+					className="backButton"
+					type="image"
+					onClick={() => setShow()}
+					src="/images/backImg.png"
+				></input>
+				<Planet
+					name={matchingPlanet.englishName}
+					dateDiscovered={
+						matchingPlanet.discoveryDate != ""
+							? matchingPlanet.discoveryDate
+							: "N/A"
+					}
+					imgUrl={`/images/${matchingPlanet.englishName}.png`}
+					mass={matchingPlanet.mass && matchingPlanet.mass.massValue}
+					massExp={matchingPlanet.mass && matchingPlanet.mass.massExponent}
+					moons={matchingPlanet.moons != null ? matchingPlanet.moons.length : 0}
+					radius={matchingPlanet.meanRadius}
+					gravity={matchingPlanet.gravity}
+					planetDescriptions={planetDescriptions}
+				/>
+			</div>
 		</div>
 	);
 

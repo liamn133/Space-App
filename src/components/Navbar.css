@@ -1,10 +1,9 @@
-a{
-    color: white;
-    flex: 1;
+a {
+	color: white;
+	flex: 1;
 }
 
-.navContainer{
-    display: flex;
-    background-color: rgb(30, 39, 90);
-
+.navContainer {
+	display: flex;
+	background-color: rgb(30, 39, 90);
 }

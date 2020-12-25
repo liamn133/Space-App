@@ -6,16 +6,16 @@ function Block(props){
  
     return (
         <div>
-            <Card style = {{backgroundColor: 'transparent'}}>
-                <CardContent style = {{color: 'white'}}>
+            {/* <Card style = {{backgroundColor: 'transparent'}}>
+                <CardContent style = {{color: 'white'}}> */}
                   
                   <div className = "planetInfo">
-                  <h2>{props.name}</h2>
+                  <h2 id ="planetTitle">{props.name}</h2>
                    <img id = {props.name} onClick = {props.onImageClick} className = 'cardImage' src = {props.image}/>
                   </div>
-                
+              {/*   
                 </CardContent>
-            </Card>
+            </Card> */}
             </div>
       
     )

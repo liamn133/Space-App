@@ -1,18 +1,12 @@
-
-#test{
-    
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    
+#test {
+	height: 100vh;
+	display: flex;
+	align-items: center;
 }
 
-.backButton{
-    width: 48px;
-    height: 38px;
-    padding: 0;
-    margin: 20px 0 0 25px;
+.backButton {
+	width: 48px;
+	height: 38px;
+	padding: 0;
+	margin: 20px 0 0 25px;
 }
-
-
-

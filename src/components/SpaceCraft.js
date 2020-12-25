@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const SpaceCraft = () => {
-    return (
-        <div>
-         SpaceCraft 
-        </div>
-    )
-}
+	return <div>SpaceCraft</div>;
+};
 
 export default SpaceCraft;
