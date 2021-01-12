@@ -16,11 +16,11 @@ const Life = () => {
 				The Drake equation is used to estimate how many intelligent
 				civilizations are out there in the galaxy. When plugging in values to
 				the equation, the number varies wildly from 1,000 to 100 million.
-				<img id="drakeImage" src="/images/drakeEquation.png" />
+				<img id="drakeImage" src="./images/drakeEquation.png" />
 			</p>
 			<div id="lifeVideoContainer">
 				<video autoPlay muted loop>
-					<source src="/images/hotSpring.mp4" type="video/mp4" />
+					<source src="./images/hotSpring.mp4" type="video/mp4" />
 				</video>
 			</div>
 		</section>

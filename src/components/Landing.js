@@ -6,7 +6,7 @@ const Landing = () => {
 	return (
 		<div class="container">
 			<video autoPlay muted loop>
-				<source src="/images/landingVideo.mp4" type="video/mp4" />
+				<source src="./images/landingVideo.mp4" type="video/mp4" />
 			</video>
 			<div class="headerContent">
 				<h2 id="headerTitle">Start your solar system journey</h2>

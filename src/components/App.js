@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter, Route, Switch } from "react-router-dom";
 import "./App.css";
 import planetDescriptions from "../constants/planetDescriptions";
 import HomeScreen from "./HomeScreen";
-import SpaceCraft from "./SpaceCraft";
 import Landing from "./Landing";
 import About from "./About";
 
@@ -49,7 +48,7 @@ function App() {
 		const getImages = async () => {
 			const allImages = [];
 			for await (const planet of planets) {
-				const data = `/images/compressed/${planet.englishName}.png`; //Load images from folder on component mount
+				const data = `./images/compressed/${planet.englishName}.png`; //Load images from folder on component mount
 				allImages.push(data);
 			}
 			setImages(allImages);
@@ -59,7 +58,7 @@ function App() {
 
 	return (
 		<div className="App">
-			<Router>
+			<HashRouter>
 				<Switch>
 					<Route
 						path="/main"
@@ -83,7 +82,7 @@ function App() {
 					<Route path="/" exact component={Landing} />
 					<Route path="/about" exact component={About} />
 				</Switch>
-			</Router>
+			</HashRouter>
 		</div>
 	);
 }

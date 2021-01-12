@@ -1,12 +1,14 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import Carousel from "react-elastic-carousel";
 import Block from "./Block";
 import Planet from "./Planet";
 import "./HomeScreen.css";
-import "./SpaceCraftSlide";
-import SpaceCraftSlide from "./SpaceCraftSlide";
+
 import Galaxy from "./Galaxy";
 import Life from "./Life";
+import earth from "../images/Earth.png"
+
+
 
 const HomeScreen = ({
 	planets,
@@ -23,7 +25,7 @@ const HomeScreen = ({
 		{ width: 1100, itemsToShow: 3 },
 		{ width: 1270, itemsToShow: 4 },
 	];
-
+    console.log(matchingPlanet)
 	useEffect(() => {
 		const queryLarge = window.matchMedia("(max-width:600px)");
 
@@ -68,8 +70,8 @@ const HomeScreen = ({
 						43 years in Space, and has travelled over 25 billion km from Earth,
 						with the probe now in interstellar space.
 					</div>
-					<img id="img1" src="/images/voyager1.jpg" />
-					<img id="img2" src="/images/curiosity.png" />
+					<img id="img1" src="./images/compressed/voyager1.jpg" />
+					<img id="img2" src="./images/compressed/curiosity.png" />
 					<div id="div2">
 						<h3>Curiosity</h3>
 						Landing on Mars in 2012, the Curiosity rover was tasked with
@@ -77,7 +79,7 @@ const HomeScreen = ({
 						life existing on the planet. The curiosity rover cost a massive $2.5
 						billion USD to construct and launch.
 					</div>
-					<img id="img3" src="/images/cassini.png" />
+					<img id="img3" src="./images/compressed/cassini.png" />
 					<div id="div3">
 						<h3>Cassini</h3>
 						Sent into space in 1997, to expolre Saturn and the many diverse
@@ -91,12 +93,8 @@ const HomeScreen = ({
 						enough power to last until 2030, so it can continue to make
 						discoveries for a while yet.
 					</div>
-					<img id="img4" src="/images/newHorizons.png" />
-					<SpaceCraftSlide
-						title="Hello"
-						content="yar"
-						src="/images/cassini.png"
-					/>
+					<img id="img4" src="./images/compressed/newHorizons.png" />
+				
 				</div>
 			</section>
 			<Galaxy />
@@ -111,7 +109,7 @@ const HomeScreen = ({
 					className="backButton"
 					type="image"
 					onClick={() => setShow()}
-					src="/images/backImg.png"
+					src="./images/backImg.png"
 				></input>
 				<Planet
 					name={matchingPlanet.englishName}
@@ -120,7 +118,8 @@ const HomeScreen = ({
 							? matchingPlanet.discoveryDate
 							: "N/A"
 					}
-					imgUrl={`/images/${matchingPlanet.englishName}.png`}
+					 imgUrl={`./images/compressed/${matchingPlanet.englishName}.png`}
+				
 					mass={matchingPlanet.mass && matchingPlanet.mass.massValue}
 					massExp={matchingPlanet.mass && matchingPlanet.mass.massExponent}
 					moons={matchingPlanet.moons != null ? matchingPlanet.moons.length : 0}
