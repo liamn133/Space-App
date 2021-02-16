@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Space-App/static/css/main.1115d85a.chunk.css",
-    "main.js": "/Space-App/static/js/main.bc6e608a.chunk.js",
-    "main.js.map": "/Space-App/static/js/main.bc6e608a.chunk.js.map",
+    "main.css": "/Space-App/static/css/main.3cd15ecc.chunk.css",
+    "main.js": "/Space-App/static/js/main.6d24a15d.chunk.js",
+    "main.js.map": "/Space-App/static/js/main.6d24a15d.chunk.js.map",
     "runtime-main.js": "/Space-App/static/js/runtime-main.dc9bc8d5.js",
     "runtime-main.js.map": "/Space-App/static/js/runtime-main.dc9bc8d5.js.map",
     "static/js/2.b00c5e7e.chunk.js": "/Space-App/static/js/2.b00c5e7e.chunk.js",
     "static/js/2.b00c5e7e.chunk.js.map": "/Space-App/static/js/2.b00c5e7e.chunk.js.map",
     "index.html": "/Space-App/index.html",
-    "static/css/main.1115d85a.chunk.css.map": "/Space-App/static/css/main.1115d85a.chunk.css.map",
+    "static/css/main.3cd15ecc.chunk.css.map": "/Space-App/static/css/main.3cd15ecc.chunk.css.map",
     "static/js/2.b00c5e7e.chunk.js.LICENSE.txt": "/Space-App/static/js/2.b00c5e7e.chunk.js.LICENSE.txt",
     "static/media/Earth.47bf2957.png": "/Space-App/static/media/Earth.47bf2957.png",
     "static/media/About.css": "/Space-App/static/media/aboutBackground.7da2d7b7.png",
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.dc9bc8d5.js",
     "static/js/2.b00c5e7e.chunk.js",
-    "static/css/main.1115d85a.chunk.css",
-    "static/js/main.bc6e608a.chunk.js"
+    "static/css/main.3cd15ecc.chunk.css",
+    "static/js/main.6d24a15d.chunk.js"
   ]
 }
